@@ -35,36 +35,19 @@ h2 {
   flex-direction: column;
   gap: 16px;
 }
-.header-box {
-  display: flex;
-  gap: 32px;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+.item {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 16px;
+  row-gap: 24px;
+  align-items: center;
 }
-/* .header-box:hover {
-  color: hsl(14, 88%, 65%);
-} */
-.arrow-open {
-  font-family: serif;
-  border: none;
-  background: none;
-  font-size: 56px;
-  font-weight: 500;
-  color: hsl(14, 88%, 65%);
-  cursor: pointer;
-}
-.faq-active {
-  color: hsl(14, 88%, 65%);
-  font-weight: 700;
-}
-.hidden {
+.hidden-box {
+  grid-column: 2;
   display: none;
 }
-/* - Soft red: hsl(14, 88%, 65%)
-
-#### Gradient
-
-Background gradient:
-
-- Soft violet: hsl(273, 75%, 66%)
-- Soft blue: hsl(240, 73%, 65%) */
+.open {
+  border-top: #087f5b solid 5px;
+}
