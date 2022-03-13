@@ -1,12 +1,19 @@
 `use strict`;
 
-const faqTextBox = document.querySelectorAll(`.faq-text`);
-const arrowOpen = document.querySelectorAll(`.arrow-open`);
 const headerBox = document.querySelectorAll(`.header-box`);
-headerBox.forEach((head) =>
-  head.addEventListener(`click`, function (e) {
-    console.log(e.target);
-    e.target.classList.toggle(`faq-active`);
-    e.target.classList.remove(`hidden`);
-  })
-);
+const faqContainer = document.querySelector(`.faq--1`);
+const faqText = document.getElementsByClassName(`faq-text`);
+const arrowOpen = document.getElementsByClassName(`arrow-open`);
+console.log(arrowOpen);
+
+for (let i = 0; i < arrowOpen.length; i++) {
+  arrowOpen[i].addEventListener(
+    `click`,
+    () => {
+      for (let i = 0; i < faqText.length; i++) {
+        faqText[i].classList.toggle(`hidden`);
+      }
+    },
+    false
+  );
+}
