@@ -1,9 +1,15 @@
 `use strict`;
 
 const boxItem = document.querySelectorAll(`.item`);
-const arrowBtn = document.querySelectorAll(`.arrow-open`);
 
-console.log(boxItem);
-console.log(arrowBtn);
-
-const open = function () {};
+// const open = function () {
+//   boxItem.forEach(() => {
+//     this.classList.toggle(`open`);
+//   });
+// };
+// boxItem.forEach((el) => el.addEventListener(`click`, open));
+boxItem.forEach((el) =>
+  el.addEventListener(`click`, function () {
+    el.classList.toggle(`open`);
+  })
+);

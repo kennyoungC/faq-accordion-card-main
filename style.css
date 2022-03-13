@@ -27,10 +27,18 @@ h2 {
   background-color: #fff;
   border-radius: 11px;
   padding: 32px 48px;
-  display: flex;
-  gap: 32px;
+  display: grid;
+  column-gap: 70px;
+  grid-template-columns: auto 1fr;
+
   justify-content: center;
   align-items: center;
+}
+.col-1 img {
+  margin-left: -50px;
+  background-image: url(./images/bg-pattern-desktop.svg);
+}
+.col-1::before {
 }
 .col-2 {
   display: flex;
@@ -46,6 +54,11 @@ h2 {
   row-gap: 24px;
   align-items: center;
 }
+.sub-header:hover,
+.arrow-open:hover {
+  color: hsl(14, 88%, 65%);
+}
+
 .hidden-box {
   grid-column: 1;
   display: none;
@@ -63,10 +76,28 @@ h2 {
   border: none;
   background: none;
 }
-.arrow-icon {
+/* .arrow-icon {
   border: none;
   background: none;
   font-size: 24px;
+} */
+.open .arrow-down {
+  border: solid hsl(14, 88%, 65%);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 6px;
+
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.arrow-down {
+  border: solid rgba(0, 0, 0, 0.692);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 6px;
+
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .open {
@@ -76,7 +107,6 @@ h2 {
   display: block;
 }
 
-.open .arrow-down,
 .open .sub-header,
 .open .arrow-icon {
   color: hsl(14, 88%, 65%);
