@@ -8,7 +8,7 @@ body {
   max-width: 1440px auto;
   font-size: 18px;
   line-height: 1;
-  /* height: 80vh; */
+  height: 100vh;
   background: linear-gradient(
     to bottom,
     hsl(273, 75%, 66%),
@@ -23,23 +23,34 @@ h2 {
 }
 .container {
   width: 1150px;
-  margin: 100px auto;
+  margin: 50px auto;
   background-color: #fff;
   border-radius: 11px;
-  padding: 32px 48px;
+  padding: 56px 48px;
   display: grid;
   column-gap: 70px;
   grid-template-columns: auto 1fr;
 
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-.col-1 img {
-  margin-left: -50px;
-  background-image: url(./images/bg-pattern-desktop.svg);
+.woman-deskop {
+  margin-left: -120px;
+  position: relative;
 }
-.col-1::before {
+.box {
+  display: block;
+  position: absolute;
+  /* left: -30px;
+  top: 50px;
+  transform: translate(50, 50); */
+  top: 50;
+  left: 50;
+  transform: translate(-140px, 140px);
+  z-index: 122;
 }
+
 .col-2 {
   display: flex;
   flex-direction: column;
@@ -99,7 +110,15 @@ h2 {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
+.arrow-down:hover {
+  border: solid hsl(14, 88%, 65%);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 6px;
 
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
 .open {
   border-top: hsl(14, 88%, 65%) solid 2px;
 }
@@ -110,4 +129,25 @@ h2 {
 .open .sub-header,
 .open .arrow-icon {
   color: hsl(14, 88%, 65%);
+}
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 24px;
+}
+.attribution a {
+  color: hsl(14, 88%, 65%);
+}
+.attribution a:link,
+.attribution a:visited {
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.attribution a:hover,
+.attribution a:active {
+  color: hsl(171, 66%, 44%);
+  text-decoration: underline;
+  font-weight: bolder;
 }
