@@ -12,12 +12,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./tip-calculator-app.png)
-
 ### Links
 
-- Solution URL: [https://github.com/kennyoungC/tip-calculator-app-main.git](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://tip-app-calculator-kenneth)
+- Solution URL: [https://github.com/kennyoungC/faq-accordion-card-main.git](https://github.com/kennyoungC/faq-accordion-card-main.git)
+- Live Site URL: [Add live site URL here](https://faq-accordion-card-kenneth.netlify.app/)
 
 ## My process
 
