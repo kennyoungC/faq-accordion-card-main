@@ -8,7 +8,7 @@ body {
   max-width: 1440px auto;
   font-size: 18px;
   line-height: 1;
-  height: 100vh;
+  /* height: 100vh; */
   background: linear-gradient(
     to bottom,
     hsl(273, 75%, 66%),
@@ -67,6 +67,7 @@ h2 {
 }
 .sub-header:hover,
 .arrow-open:hover {
+  cursor: pointer;
   color: hsl(14, 88%, 65%);
 }
 
@@ -92,21 +93,13 @@ h2 {
   background: none;
   font-size: 24px;
 } */
-.open .arrow-down {
-  border: solid hsl(14, 88%, 65%);
-  border-width: 0 6px 6px 0;
-  display: inline-block;
-  padding: 6px;
-
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
 .arrow-down {
   border: solid rgba(0, 0, 0, 0.692);
   border-width: 0 6px 6px 0;
   display: inline-block;
   padding: 6px;
 
+  cursor: pointer;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
@@ -121,6 +114,15 @@ h2 {
 }
 .open {
   border-top: hsl(14, 88%, 65%) solid 2px;
+}
+.open .arrow-up {
+  border: solid hsl(14, 88%, 65%);
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 6px;
+
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
 }
 .open .hidden-box {
   display: block;
@@ -150,4 +152,84 @@ h2 {
   color: hsl(171, 66%, 44%);
   text-decoration: underline;
   font-weight: bolder;
+}
+@media (max-width: 64em) {
+  .container {
+    width: 950px;
+    /* padding: 48px 32px; */
+  }
+}
+@media (max-width: 48em) {
+  .container {
+    width: 600px;
+    grid-template-columns: 1fr;
+    /* padding: 48px 32px; */
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .container {
+    display: block;
+    margin: 150px auto;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+  }
+  .col-1 {
+    position: absolute;
+    top: -150px;
+    left: 150px;
+    /* margin-bottom: 100px; */
+  }
+  .col-2 {
+    padding-top: 150px;
+  }
+  .woman-deskop {
+    width: 70%;
+    margin-left: 0;
+    position: relative;
+  }
+  .box {
+    width: 30%;
+    display: block;
+    position: absolute;
+    top: -55px;
+    left: 120px;
+    transform: translate(-140px, 140px);
+    z-index: 122;
+  }
+}
+@media (max-width: 27em) {
+  /* body {
+    background: none;
+  }
+  html {
+    background: linear-gradient(
+      to bottom,
+      hsl(273, 75%, 66%),
+      hsl(240, 73%, 65%)
+    );
+  } */
+  .container {
+    width: 400px;
+    grid-template-columns: 1fr;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .col-1 {
+    top: -120px;
+    left: 70px;
+  }
+  .woman-deskop {
+    width: 80%;
+  }
+  .col-2 {
+  }
+  .box {
+    width: 40%;
+    top: -75px;
+    left: 120px;
+    transform: translate(-140px, 140px);
+  }
 }
